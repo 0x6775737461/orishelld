@@ -2,6 +2,6 @@
 
 get_ram(){
    memtotal=$(awk '/MemTotal/ { print $2 }' /proc/meminfo)
-   memtotal=$(echo "${memtotal}/(1024^2)" | bc -l)
+   memtotal=$(bc -l <<< "${memtotal}/(1024^2)")
    memtotal=${memtotal:0:4}" GiB"
 }
