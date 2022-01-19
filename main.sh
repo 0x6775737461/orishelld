@@ -5,7 +5,7 @@ main() {
    if test_funcs "$@"; then
 cat << EOF
 OS: "$os"
-Python Versions: "$versions"
+Python Version: "$version"
 RAM: "$memtotal"
 Root Size: "$hd"
 Kernel Version: "$kernelv"
